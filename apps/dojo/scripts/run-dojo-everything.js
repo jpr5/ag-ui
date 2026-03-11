@@ -160,7 +160,7 @@ const ALL_SERVICES = {
     cwd: path.join(integrationsRoot, 'claude-agent-sdk/python/examples'),
     env: {
       PORT: 8019,
-      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'test-key',
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'sk-ant-api03-test-key-for-llmock-000000000000000000000000000000000000000000000000-000000000000AA',
       ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555/v1' }),
     },
   }],
@@ -170,7 +170,7 @@ const ALL_SERVICES = {
     cwd: path.join(integrationsRoot, 'claude-agent-sdk/typescript'),
     env: {
       PORT: 8020,
-      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'test-key',
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'sk-ant-api03-test-key-for-llmock-000000000000000000000000000000000000000000000000-000000000000AA',
       ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555/v1' }),
     },
   }],
