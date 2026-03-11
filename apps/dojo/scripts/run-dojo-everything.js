@@ -161,7 +161,7 @@ const ALL_SERVICES = {
     env: {
       PORT: 8019,
       ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'sk-ant-api03-test-key-for-llmock-000000000000000000000000000000000000000000000000-000000000000AA',
-      ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555/v1' }),
+      ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555' }),
     },
   }],
   'claude-agent-sdk-typescript': [{
@@ -171,7 +171,7 @@ const ALL_SERVICES = {
     env: {
       PORT: 8020,
       ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'sk-ant-api03-test-key-for-llmock-000000000000000000000000000000000000000000000000-000000000000AA',
-      ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555/v1' }),
+      ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555' }),
     },
   }],
   'microsoft-agent-framework-python': [{
