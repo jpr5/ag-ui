@@ -106,7 +106,11 @@ const ALL_SERVICES = {
     command: 'npm run dev',
     name: 'Mastra',
     cwd: path.join(integrationsRoot, 'mastra/typescript/examples'),
-    env: { PORT: 8008 },
+    env: {
+      PORT: 8008,
+      OPENAI_API_KEY: process.env.OPENAI_API_KEY || 'test-key',
+      ...(!process.env.OPENAI_API_KEY && { OPENAI_BASE_URL: 'http://localhost:5555/v1' }),
+    },
   }],
   'pydantic-ai': [{
     command: 'uv run dev',
@@ -154,13 +158,21 @@ const ALL_SERVICES = {
     command: 'uv run dev',
     name: 'Claude Agent SDK (Python)',
     cwd: path.join(integrationsRoot, 'claude-agent-sdk/python/examples'),
-    env: { PORT: 8019 },
+    env: {
+      PORT: 8019,
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'test-key',
+      ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555/v1' }),
+    },
   }],
   'claude-agent-sdk-typescript': [{
     command: 'npx tsx examples/server.ts',
     name: 'Claude Agent SDK (TypeScript)',
     cwd: path.join(integrationsRoot, 'claude-agent-sdk/typescript'),
-    env: { PORT: 8020 },
+    env: {
+      PORT: 8020,
+      ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY || 'test-key',
+      ...(!process.env.ANTHROPIC_API_KEY && { ANTHROPIC_BASE_URL: 'http://localhost:5555/v1' }),
+    },
   }],
   'microsoft-agent-framework-python': [{
     command: 'uv run dev',
