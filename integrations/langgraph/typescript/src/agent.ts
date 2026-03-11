@@ -190,6 +190,7 @@ export class LangGraphAgent extends AbstractAgent {
       id: input.runId,
       threadId: input.threadId,
       hasFunctionStreaming: false,
+      hasPredictState: false,
     };
     // Reset cancel flags for this run
     this.cancelRequested = false;
